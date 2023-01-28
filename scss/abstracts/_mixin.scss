@@ -1,0 +1,17 @@
+@use "sass:map";
+@use './breakpoints' as *;
+
+@mixin mq($key, $minmax) {
+
+  $size: map-get($breakpoints, $key);
+
+  @media screen and ($minmax: $size) {
+    @content;
+  }
+}
+
+@mixin customPropLoop($arr, $name) {
+  @each $prop, $value in $arr {
+    --#{$name}-#{$prop}: #{$value};
+  }
+}

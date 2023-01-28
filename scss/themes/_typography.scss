@@ -1,0 +1,38 @@
+$font-family: (
+  barlow: ("'Barlow Condensed'", sans-serif),
+  bellefair: ("'Bellefair'", serif)
+);
+
+$lg-font-size: (
+  300: 1.125rem,
+  400: 1.75rem,
+  500: 2rem,
+  700: 3.5rem,
+  800: 6.25rem,
+);
+
+$md-font-size: (
+  200: 1rem,
+  300: 1rem,
+  400: 1.25rem,
+  500: 1.5rem,
+  700: 2.5rem,
+  800: 5rem
+);
+
+$font-size: (
+  200: 0.875rem,
+  300: 0.9375rem,
+  400: 1rem,
+  500: 1.25rem,
+  600: 1.5rem,
+  700: 1.75rem,
+  800: 3.5rem,
+  900: clamp(5rem, 10vw + 2.5rem ,9.375rem)
+);
+
+$letter-spacing: (
+  1: 2.35px,
+  2: 2.7px,
+  3: 4.75px,
+);

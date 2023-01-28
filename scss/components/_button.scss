@@ -1,0 +1,16 @@
+.circle-btn {
+  font-size: 2rem;
+  background-color: hsl(var(--clr-white));
+  padding: 0 2rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: box-shadow 350ms ease-in;
+
+  &:hover {
+    box-shadow: 0 0 0 2.5rem hsl(var(--clr-white) / 0.5);
+  }
+}

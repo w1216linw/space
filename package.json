@@ -1,0 +1,19 @@
+{
+  "name": "space",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "sass": "sass --watch scss:css",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.57.1",
+    "vite": "^4.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.6.3"
+  }
+}

@@ -1,0 +1,99 @@
+@use '../themes/color' as *;
+@use '../themes/typography' as *;
+@use '../abstracts' as *;
+@forward './pseudo';
+
+:root {
+  @include customPropLoop($colors, clr);
+  @include customPropLoop($font-family, ff);
+  @include customPropLoop($font-size, fs);
+  @include customPropLoop($letter-spacing, letter-spacing);
+
+  @include mq(medium, min-width) {
+    @include customPropLoop($md-font-size, fs);
+  }
+
+  @include mq(large, min-width) {
+    @include customPropLoop($lg-font-size, fs);
+  }
+}
+
+
+//classes for text color and background color
+@each $prop, $value in $colors {
+  .text-#{$prop} {
+    color: hsl(var(--clr-#{$prop}));
+  }
+
+  .bg-#{$prop} {
+    background-color: hsl(var(--clr-#{$prop}));
+  }
+}
+
+//classes for font family
+@each $prop, $value in $font-family {
+  .ff-#{$prop}{
+    font-family: var(--ff-#{$prop});
+  }
+}
+
+//classes for font size
+@each $prop, $value in $font-size {
+  @if($prop < 600) {
+    .fs-#{$prop}{
+      font-size: var(--fs-#{$prop});
+    }
+  } @else {
+    .fs-#{$prop}{
+      font-size: var(--fs-#{$prop});
+      line-height: 1.1;
+    }
+  }
+}
+
+//classes for letter spacing
+@each $prop, $value in $letter-spacing {
+  .letter-spacing-#{$prop}{
+    letter-spacing: var(--letter-spacing-#{$prop});
+  }
+}
+
+//general utils
+.d-flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.d-grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.place-items-center {
+  place-items: center;
+}
+
+.sr-only {
+  position: absolute; 
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px; 
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-gap, 1rem);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+

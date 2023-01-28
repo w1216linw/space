@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body class="home">
+    <header class="header | d-flex align-items-center">
+      <div>
+        <img src="./assets/shared/logo.svg" alt="space web logo" />
+      </div>
+      <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded=false>
+        <span class="sr-only">Menu</span>
+      </button>
+      <nav>
+        <ul
+          id="primary-navigation"
+          class="primary-navigation | d-flex underline-indicators uppercase ff-barlow letter-spacing-1"
+        >
+          <li class="active">
+            <a href=""><span>00</span> Home</a>
+          </li>
+          <li><span>01</span> Destination</li>
+          <li><span>02</span> Crew</li>
+          <li><span>03</span> Technology</li>
+        </ul>
+      </nav>
+    </header>
+    <main class="grid-container">
+      <div class="flow bottom">
+        <h5 class="letter-spacing-3 fs-600 uppercase text-light">
+          So, you want to travel to
+        </h5>
+        <h1 class="fs-900 text-white ff-bellefair uppercase">Space</h1>
+        <p class="text-wrapper text-light">
+          Let’s face it; if you want to go to space, you might as well genuinely
+          go to outer space and not hover kind of on the edge of it. Well sit
+          back, and relax because we’ll give you a truly out of this world
+          experience!
+        </p>
+      </div>
+      <div class="btn-wrapper | d-grid place-items-center bottom">
+        <a href="#" class="circle-btn | ff-bellefair text-dark uppercase"
+          >Explore</a
+        >
+      </div>
+    </main>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>

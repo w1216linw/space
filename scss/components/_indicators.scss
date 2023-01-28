@@ -1,0 +1,56 @@
+.underline-indicators {
+  & span {
+    font-weight: 700;
+  }
+  & > * {
+    padding: var(--underlines-gap, 1rem) 0;
+    border: 0;
+    border-bottom: 2px solid hsl(var(--clr-white) / 0);
+    cursor: pointer;
+  }
+
+  & > *:is(:hover, :focus){
+    border-color: hsl(var(--clr-white) / 0.5);
+  }
+
+  & > .active,
+  & > [aria-selected="true"]{
+    border-color: hsl(var(--clr-white) / 1);
+  }
+}
+
+.dot-indicators {
+  & > * {    
+    padding: .5em;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: hsl(var(--clr-white) / .25);
+  }
+
+  & > *:is(:hover, :focus) {
+    background-color: hsl(var(--clr-white) / .5);
+  }
+
+  & > [aria-selected="true"]{
+    background-color: hsl(var(--clr-white) / 1);
+  }
+}
+
+.number-indicators {
+  & > * {    
+    padding: var(--underlines-gap, 1rem) 0;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: hsl(var(--clr-white) / .25);
+  }
+
+  & > *:is(:hover, :focus) {
+    background-color: hsl(var(--clr-white) / .5);
+  }
+
+  & > [aria-selected="true"]{
+    background-color: hsl(var(--clr-white) / 1);
+  }
+}
