@@ -84,7 +84,7 @@
   padding: 0;
   margin: -1px; 
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+  clip-path: rect(0, 0, 0, 0);
   white-space: nowrap; /* added line */
   border: 0;
 }
@@ -97,3 +97,7 @@
   text-transform: uppercase;
 }
 
+.text-wrapper {
+  width: clamp(20rem, 40vw, 25rem);
+  min-height: 7rem;
+}

@@ -8,7 +8,7 @@
   cursor: pointer;
   display: grid;
   place-items: center;
-  transition: box-shadow 350ms ease-in;
+  transition: box-shadow 350ms ease-out;
 
   &:hover {
     box-shadow: 0 0 0 2.5rem hsl(var(--clr-white) / 0.5);

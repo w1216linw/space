@@ -1,5 +1,6 @@
 @use './utils';
 @use './components';
+@use './pages';
 @use './abstracts' as *;
 
 /*
@@ -47,6 +48,7 @@ a {
 ul,
 ol {
   list-style: none;
+  padding: 0;
 }
 
 h1,
@@ -72,79 +74,14 @@ body {
   background-position: bottom center;
 }
 
-/* background */
-.home {
-  background-image: url('../assets/home/background-home-mobile.jpg');
+.skip-to-content {
+  position: absolute;
+  width: max-content;
+  border: 1px solid hsl(var(--clr-light));
+  padding: 0.25rem 1rem;
+  translate: 0 -100%;
 
-  @include mq(medium, min-width) {
-    background-image: url('../assets/home/background-home-tablet.jpg');
+  &:focus {
+    translate: 0;
   }
-
-  @include mq(large, min-width) {
-    background-image: url('../assets/home/background-home-desktop.jpg');
-  }
-}
-
-/* Home Page */
-
-
-.primary-navigation {
-
-  --gap: 2rem;
-  backdrop-filter: blur(1rem);
-  background-color: hsl(var(--clr-white) / 0.2);
-  
-  @include mq(medium, max-width) {
-    & {
-      --underlines-gap: 0.5rem;
-      --gap: 1rem;
-      flex-direction: column;
-      padding: 6rem 2rem;
-      position: fixed;
-      inset: 0 0 0 30%;
-      translate: 100% 0;
-      transition: translate 250ms ease-in;
-    }
-
-    & > * {
-      border-bottom: 0;
-    }
-  }
-}
-
-.menu-toggle {
-  display: none;
-  
-  @include mq(medium, max-width) {
-    display: block;
-    width: 1.5rem;
-    aspect-ratio: 1;
-    background: url('../assets/shared/icon-hamburger.svg') no-repeat center;
-    border: 0;
-    position: absolute;
-    top: 2rem;
-    right: 1rem;
-    background-color: transparent;
-    z-index: 9;
-    cursor: pointer;
-
-    &:focus-visible{
-      outline: 2px solid black;
-      outline-offset: 5px;
-    }
-
-    &[aria-expanded=true] {
-      background-image: url('../assets/shared/icon-close.svg')
-    }
-  }
-}
-
-@include mq(medium, max-width) {
-  .show-menu {
-    translate: 0 0;
-  }
-}
-
-.text-wrapper {
-  width: clamp(22rem, 25vw, 25rem);
 }

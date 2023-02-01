@@ -2,11 +2,15 @@
   & span {
     font-weight: 700;
   }
+
+  & a {
+    cursor: pointer;
+  }
+
   & > * {
     padding: var(--underlines-gap, 1rem) 0;
     border: 0;
     border-bottom: 2px solid hsl(var(--clr-white) / 0);
-    cursor: pointer;
   }
 
   & > *:is(:hover, :focus){
@@ -20,7 +24,12 @@
 }
 
 .dot-indicators {
-  & > * {    
+
+  *:where(:not(:first-child)){
+    margin-left: var(--gap, .5rem);
+  }
+
+  & > * { 
     padding: .5em;
     border: 0;
     border-radius: 50%;
@@ -32,17 +41,18 @@
     background-color: hsl(var(--clr-white) / .5);
   }
 
-  & > [aria-selected="true"]{
+  & > [aria-selected=true]{
     background-color: hsl(var(--clr-white) / 1);
   }
 }
 
 .number-indicators {
-  & > * {    
-    padding: var(--underlines-gap, 1rem) 0;
+
+  & > * {
     border: 0;
+    width: clamp(3rem, 6vw ,5rem);
+    aspect-ratio: 1;
     border-radius: 50%;
-    cursor: pointer;
     background-color: hsl(var(--clr-white) / .25);
   }
 

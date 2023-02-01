@@ -12,12 +12,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Frontend Mentor | Space tourism website</title>
+    <title>Space tourism</title>
   </head>
   <body class="home">
-    <header class="header | d-flex align-items-center">
+    <a href="#main" class="skip-to-content">Skip to content</a>
+    <header class="header | d-flex">
       <div>
-        <img src="./assets/shared/logo.svg" alt="space web logo" />
+        <img class="logo" src="./assets/shared/logo.svg" alt="space web logo" />
       </div>
       <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded=false>
         <span class="sr-only">Menu</span>
@@ -28,15 +29,15 @@
           class="primary-navigation | d-flex underline-indicators uppercase ff-barlow letter-spacing-1"
         >
           <li class="active">
-            <a href=""><span>00</span> Home</a>
+            <a href="#" class="fs-200"><span aria-hidden="true">00</span> Home</a>
           </li>
-          <li><span>01</span> Destination</li>
-          <li><span>02</span> Crew</li>
-          <li><span>03</span> Technology</li>
+          <li><a href="./pages/destination/index.html" class="fs-200"><span aria-hidden="true">01</span> Destination</a></li>
+          <li><a href="./pages/crew/index.html" class="fs-200"><span aria-hidden="true">02</span> Crew</a></li>
+          <li><a href="./pages/technology/index.html" class="fs-200"><span aria-hidden="true">03</span> Technology</a></li>
         </ul>
       </nav>
     </header>
-    <main class="grid-container">
+    <main id="main" class="grid-container" style="--row-gap: 6rem">
       <div class="flow bottom">
         <h5 class="letter-spacing-3 fs-600 uppercase text-light">
           So, you want to travel to
@@ -50,7 +51,7 @@
         </p>
       </div>
       <div class="btn-wrapper | d-grid place-items-center bottom">
-        <a href="#" class="circle-btn | ff-bellefair text-dark uppercase"
+        <a href="./pages/destination/index.html" class="circle-btn | ff-bellefair text-dark uppercase"
           >Explore</a
         >
       </div>

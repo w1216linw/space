@@ -1,0 +1,68 @@
+@use "../abstracts/" as *;
+
+.technology {
+  background-image: url("../assets/technology/background-technology-mobile.jpg");
+
+  @include mq(medium, min-width) {
+    background-image: url("../assets/technology/background-technology-tablet.jpg");
+  }
+
+  @include mq(large, min-width) {
+    background-image: url("../assets/technology/background-technology-desktop.jpg");
+  }
+}
+
+.grid-container__technology {
+  padding-inline: 0;
+  grid-template-areas:
+    "title"
+    "image"
+    "list"
+    "info";
+
+  & > picture {
+    grid-area: image;
+  }
+  & > .technology-info {
+    grid-area: info;
+  }
+  & > .technology-title {
+    grid-area: title;
+  }
+  & > .technology-list {
+    grid-area: list;
+    margin-inline: auto;
+  }
+
+  @include mq(medium, min-width) {
+    & > .technology-title {
+      justify-self: start;
+    }
+  }
+
+  @include mq(large, min-width) {
+    grid-template-columns: minmax(1rem, 1fr) minmax(0, 5rem) minmax(0,40rem) minmax(0, 37rem) minmax(1rem,1fr);
+    & {
+      grid-template-areas:
+        ". title title image"
+        ". list info image"
+        ". . info image"
+        ". . . image";
+    }
+
+    & > .technology-list {
+      flex-direction: column;
+      margin-inline: unset;
+      gap: 0.5rem;
+    }
+
+    & > .technology-info {
+      justify-items: start;
+    }
+
+    & > picture {
+      justify-self: end;
+      grid-column: span 2;
+    }
+  }
+}

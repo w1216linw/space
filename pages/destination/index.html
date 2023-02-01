@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <script type="module" src="../../utils/tabs.js" defer></script>
+    <title>Destination</title>
+  </head>
+  <body class="destination">
+    <a href="#main" class="skip-to-content">Skip to content</a>
+    <header class="header | d-flex">
+      <div>
+        <img class="logo" src="../../assets/shared/logo.svg" alt="space web logo" />
+      </div>
+      <button
+        class="menu-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Menu</span>
+      </button>
+      <nav>
+        <ul
+          id="primary-navigation"
+          class="primary-navigation | d-flex underline-indicators uppercase ff-barlow letter-spacing-1"
+        >
+          <li>
+            <a href="../../index.html" class="fs-200"
+              ><span aria-hidden="true">00</span> Home</a
+            >
+          </li>
+          <li class="active">
+            <a href="#" class="fs-200"
+              ><span aria-hidden="true">01</span> Destination</a
+            >
+          </li>
+          <li>
+            <a href="../crew/index.html" class="fs-200"
+              ><span aria-hidden="true">02</span> Crew</a
+            >
+          </li>
+          <li>
+            <a href="../technology/index.html" class="fs-200"
+              ><span aria-hidden="true">03</span> Technology</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="grid-container place-items-center">
+      <section class="title-section d-grid">
+        <h1 class="destination-title uppercase letter-spacing-2 fs-400">
+          <span class="number-indicator" aria-hidden="true">01</span> Pick your
+          destination
+        </h1>
+        <picture id="destination-picture">
+          <source srcset="../../assets/destination/image-moon.webp" type="image/webp">
+          <img class="destination-image" src="../../assets/destination/image-moon.png" alt="the moon" />
+        </picture>
+      </section>
+      <section class="info-section d-flex">
+          <div
+            class="destination-list | d-flex underline-indicators uppercase letter-spacing-1 text-light"
+            role="tablist"
+          >
+            <button aria-selected="true" class="destination-btn" tabindex="0" role="tab">Moon</button>
+            <button aria-selected="false" class="destination-btn" tabindex="-1" role="tab">Mars</button>
+            <button aria-selected="false" class="destination-btn" tabindex="-1" role="tab">Europa</button>
+            <button aria-selected="false" class="destination-btn" tabindex="-1" role="tab">Titan</button>
+        </div>
+        <article class="destination-info flow">
+          <h2 id="title" class="fs-800 uppercase ff-bellefair">Moon</h2>
+          <p id="description" class="text-wrapper text-light">
+            See our planet as you’ve never seen it before. A perfect relaxing
+            trip away to help regain perspective and come back refreshed. While
+            you’re there, take in some history by visiting the Luna 2 and Apollo
+            11 landing sites.
+          </p>
+          <div class="est-wrapper d-flex" >
+            <div>
+              <h3 class="uppercase letter-spacing-1 text-light fs-200">
+                Avg. distance
+              </h3>
+              <p id="distance" class="fs-400 uppercase ff-bellefair">384,400 km</p>
+            </div>
+            <div>
+              <h3 class="uppercase letter-spacing-1 text-light fs-200">
+                Est. travel time
+              </h3>
+              <p id="travel-time" class="fs-400 uppercase ff-bellefair">3 days</p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
