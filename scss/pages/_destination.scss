@@ -1,14 +1,14 @@
 @use '../abstracts' as *;
 
 .destination {
-  background-image: url('../assets/destination/background-destination-mobile.jpg');
+  background-image: url('../public/destination/background-destination-mobile.jpg');
 
   @include mq(medium, min-width) {
-    background-image: url('../assets/destination/background-destination-tablet.jpg');
+    background-image: url('../public/destination/background-destination-tablet.jpg');
   }
 
   @include mq(large, min-width) {
-    background-image: url('../assets/destination/background-destination-desktop.jpg');
+    background-image: url('../public/destination/background-destination-desktop.jpg');
   }
 }
 

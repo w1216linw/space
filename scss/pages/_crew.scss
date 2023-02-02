@@ -1,14 +1,14 @@
 @use '../abstracts' as *;
 
 .crew {
-  background-image: url('../assets/crew/background-crew-mobile.jpg');
+  background-image: url('../public/crew/background-crew-mobile.jpg');
 
   @include mq(medium, min-width) {
-    background-image: url('../assets/crew/background-crew-tablet.jpg');
+    background-image: url('../public/crew/background-crew-tablet.jpg');
   }
 
   @include mq(large, min-width) {
-    background-image: url('../assets/crew/background-crew-desktop.jpg');
+    background-image: url('../public/crew/background-crew-desktop.jpg');
   }
 }
 

@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import data from "../../data.json";
 import { activeSideBar, defaultSelected } from "../../utils/funcs";
+import { destPic as pic } from '../../utils/pictures';
 
 activeSideBar();
 const { destinations } = data;
@@ -23,8 +24,8 @@ export const swapDestination = (dest) => {
       $("#title").text(elem.name);
       $("#distance").text(elem.distance);
       $("#trave-time").text(elem.travel);
-      $("#destination-picture source").attr("srcset", `../.${elem.images.webp}`);
-      $("#destination-picture img").attr("src", `../.${elem.images.png}`);
+      $("#destination-picture source").attr("srcset", pic[dest].webp);
+      $("#destination-picture img").attr("src", pic[dest].png);
     }
   });
 };

@@ -1,14 +1,14 @@
 @use "../abstracts/" as *;
 
 .technology {
-  background-image: url("../assets/technology/background-technology-mobile.jpg");
+  background-image: url("../public/technology/background-technology-mobile.jpg");
 
   @include mq(medium, min-width) {
-    background-image: url("../assets/technology/background-technology-tablet.jpg");
+    background-image: url("../public/technology/background-technology-tablet.jpg");
   }
 
   @include mq(large, min-width) {
-    background-image: url("../assets/technology/background-technology-desktop.jpg");
+    background-image: url("../public/technology/background-technology-desktop.jpg");
   }
 }
 

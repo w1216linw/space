@@ -3,14 +3,14 @@
 
 /* Home Page */
 .home {
-  background-image: url('../assets/home/background-home-mobile.jpg');
+  background-image: url('../public/home/background-home-mobile.jpg');
 
   @include mq(medium, min-width) {
-    background-image: url('../assets/home/background-home-tablet.jpg');
+    background-image: url('../public/home/background-home-tablet.jpg');
   }
 
   @include mq(large, min-width) {
-    background-image: url('../assets/home/background-home-desktop.jpg');
+    background-image: url('../public/home/background-home-desktop.jpg');
   }
 }
 
@@ -77,7 +77,7 @@
     display: block;
     width: 1.5rem;
     aspect-ratio: 1;
-    background: url('../assets/shared/icon-hamburger.svg') no-repeat center;
+    background: url('../public/shared/icon-hamburger.svg') no-repeat center;
     border: 0;
     position: absolute;
     top: 2rem;
@@ -92,7 +92,7 @@
     }
     
     &[aria-expanded=true] {
-      background-image: url('../assets/shared/icon-close.svg')
+      background-image: url('../public/shared/icon-close.svg')
     }
   }
 }
