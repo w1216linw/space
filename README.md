@@ -3,5 +3,4 @@
 ## Tech Stack:
 Sass, JQuery, JavaScript, HTML, CSS
 
-## Live
-https://wei-space.netlify.app
+## [Live](https://wei-space.netlify.app)
