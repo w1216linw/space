@@ -1,16 +1,16 @@
-@use '../abstracts' as *;
-@use 'sass:map';
+@use "../abstracts" as *;
+@use "sass:map";
 
 /* Home Page */
 .home {
-  background-image: url('../public/home/background-home-mobile.jpg');
+  background-image: url("../as/home/background-home-mobile.jpg");
 
   @include mq(medium, min-width) {
-    background-image: url('../public/home/background-home-tablet.jpg');
+    background-image: url("../assets/home/background-home-tablet.jpg");
   }
 
   @include mq(large, min-width) {
-    background-image: url('../public/home/background-home-desktop.jpg');
+    background-image: url("../assets/home/background-home-desktop.jpg");
   }
 }
 
@@ -28,8 +28,7 @@
   --underlines-gap: 2rem;
   backdrop-filter: blur(1rem);
   background-color: hsl(var(--clr-white) / 0.2);
-  
-  
+
   @include mq(medium, max-width) {
     & {
       --underlines-gap: 0.5rem;
@@ -41,26 +40,25 @@
       translate: 100% 0;
       transition: translate 250ms ease-in;
     }
-    
+
     & > * {
       border-bottom: 0;
     }
   }
-  
+
   @media (min-width: map.get($breakpoints, medium)) and (max-width: map.get($breakpoints, large)) {
-    
-    & span{
+    & span {
       display: none;
     }
   }
-  
+
   @include mq(medium, min-width) {
     & {
       padding-inline-start: clamp(2rem, 10vw, 6rem);
       padding-inline-end: clamp(3rem, 10vw, 8rem);
     }
   }
-  
+
   @include mq(large, min-width) {
     & {
       margin-block: 2rem;
@@ -68,16 +66,14 @@
   }
 }
 
-
-
 .menu-toggle {
   display: none;
-  
+
   @include mq(medium, max-width) {
     display: block;
     width: 1.5rem;
     aspect-ratio: 1;
-    background: url('../public/shared/icon-hamburger.svg') no-repeat center;
+    background: url("../public/shared/icon-hamburger.svg") no-repeat center;
     border: 0;
     position: absolute;
     top: 2rem;
@@ -85,14 +81,14 @@
     background-color: transparent;
     z-index: 9;
     cursor: pointer;
-    
-    &:focus-visible{
+
+    &:focus-visible {
       outline: 2px solid black;
       outline-offset: 5px;
     }
-    
-    &[aria-expanded=true] {
-      background-image: url('../public/shared/icon-close.svg')
+
+    &[aria-expanded="true"] {
+      background-image: url("../public/shared/icon-close.svg");
     }
   }
 }
@@ -104,9 +100,8 @@
 }
 
 @include mq(large, min-width) {
-
   .header::after {
-    content: '';
+    content: "";
     position: relative;
     display: block;
     height: 2px;
@@ -116,7 +111,7 @@
     order: 1;
   }
 
-  *:has(>.primary-navigation) {
+  *:has(> .primary-navigation) {
     order: 2;
     white-space: nowrap;
   }

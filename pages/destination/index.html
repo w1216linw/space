@@ -19,7 +19,11 @@
     <a href="#main" class="skip-to-content">Skip to content</a>
     <header class="header | d-flex">
       <div>
-        <img class="logo" src="../../shared/logo.svg" alt="space web logo" />
+        <img
+          class="logo"
+          src="../../assets/shared/logo.svg"
+          alt="space web logo"
+        />
       </div>
       <button
         class="menu-toggle"
@@ -63,19 +67,54 @@
           destination
         </h1>
         <picture id="destination-picture">
-          <source srcset="../../destination/image-moon.webp" type="image/webp">
-          <img class="destination-image" src="../../destination/image-moon.png" alt="the moon" />
+          <source
+            srcset="../../assets/destination/image-moon.webp"
+            type="image/webp"
+          />
+          <img
+            class="destination-image"
+            src="../../assets/destination/image-moon.png"
+            alt="the moon"
+          />
         </picture>
       </section>
       <section class="info-section d-flex">
-          <div
-            class="destination-list | d-flex underline-indicators uppercase letter-spacing-1 text-light"
-            role="tablist"
+        <div
+          class="destination-list | d-flex underline-indicators uppercase letter-spacing-1 text-light"
+          role="tablist"
+        >
+          <button
+            aria-selected="true"
+            class="destination-btn"
+            tabindex="0"
+            role="tab"
           >
-            <button aria-selected="true" class="destination-btn" tabindex="0" role="tab">Moon</button>
-            <button aria-selected="false" class="destination-btn" tabindex="-1" role="tab">Mars</button>
-            <button aria-selected="false" class="destination-btn" tabindex="-1" role="tab">Europa</button>
-            <button aria-selected="false" class="destination-btn" tabindex="-1" role="tab">Titan</button>
+            Moon
+          </button>
+          <button
+            aria-selected="false"
+            class="destination-btn"
+            tabindex="-1"
+            role="tab"
+          >
+            Mars
+          </button>
+          <button
+            aria-selected="false"
+            class="destination-btn"
+            tabindex="-1"
+            role="tab"
+          >
+            Europa
+          </button>
+          <button
+            aria-selected="false"
+            class="destination-btn"
+            tabindex="-1"
+            role="tab"
+          >
+            Titan
+          </button>
         </div>
         <article class="destination-info flow">
           <h2 id="title" class="fs-800 uppercase ff-bellefair">Moon</h2>
@@ -85,18 +124,22 @@
             you’re there, take in some history by visiting the Luna 2 and Apollo
             11 landing sites.
           </p>
-          <div class="est-wrapper d-flex" >
+          <div class="est-wrapper d-flex">
             <div>
               <h3 class="uppercase letter-spacing-1 text-light fs-200">
                 Avg. distance
               </h3>
-              <p id="distance" class="fs-400 uppercase ff-bellefair">384,400 km</p>
+              <p id="distance" class="fs-400 uppercase ff-bellefair">
+                384,400 km
+              </p>
             </div>
             <div>
               <h3 class="uppercase letter-spacing-1 text-light fs-200">
                 Est. travel time
               </h3>
-              <p id="travel-time" class="fs-400 uppercase ff-bellefair">3 days</p>
+              <p id="travel-time" class="fs-400 uppercase ff-bellefair">
+                3 days
+              </p>
             </div>
           </div>
         </article>

@@ -1,64 +1,63 @@
-import ansairPNG from '../public/crew/image-anousheh-ansari.png';
-import ansairWEBP from '../public/crew/image-anousheh-ansari.webp';
-import hurleyPNG from '../public/crew/image-douglas-hurley.png';
-import hurleyWEBP from '../public/crew/image-douglas-hurley.webp';
-import markPNG from '../public/crew/image-mark-shuttleworth.png';
-import markWEBP from '../public/crew/image-mark-shuttleworth.webp';
-import victorPNG from '../public/crew/image-victor-glover.png';
-import victorWEBP from '../public/crew/image-victor-glover.webp';
-import moonPNG from '../public/destination/image-moon.png';
-import moonWEBP from '../public/destination/image-moon.webp';
-import marsPNG from '../public/destination/image-mars.png';
-import marsWEBP from '../public/destination/image-mars.webp';
-import titanPNG from '../public/destination/image-titan.png';
-import titanWEBP from '../public/destination/image-titan.webp';
-import europaPNG from '../public/destination/image-europa.png';
-import europaWEBP from '../public/destination/image-europa.webp';
-import vehicleL from '../public/technology/technology-vehicle.jpg';
-import vehicleP from '../public/technology/image-launch-vehicle-portrait.jpg';
-import capsuleL from '../public/technology/image-space-capsule-landscape.jpg';
-import capsuleP from '../public/technology/image-space-capsule-portrait.jpg';
-import spaceportL from '../public/technology/image-spaceport-landscape.jpg';
-import spaceportP from '../public/technology/image-spaceport-portrait.jpg';
-
+import ansairPNG from "../assets/crew/image-anousheh-ansari.png";
+import ansairWEBP from "../assets/crew/image-anousheh-ansari.webp";
+import hurleyPNG from "../assets/crew/image-douglas-hurley.png";
+import hurleyWEBP from "../assets/crew/image-douglas-hurley.webp";
+import markPNG from "../assets/crew/image-mark-shuttleworth.png";
+import markWEBP from "../assets/crew/image-mark-shuttleworth.webp";
+import victorPNG from "../assets/crew/image-victor-glover.png";
+import victorWEBP from "../assets/crew/image-victor-glover.webp";
+import europaPNG from "../assets/destination/image-europa.png";
+import europaWEBP from "../assets/destination/image-europa.webp";
+import marsPNG from "../assets/destination/image-mars.png";
+import marsWEBP from "../assets/destination/image-mars.webp";
+import moonPNG from "../assets/destination/image-moon.png";
+import moonWEBP from "../assets/destination/image-moon.webp";
+import titanPNG from "../assets/destination/image-titan.png";
+import titanWEBP from "../assets/destination/image-titan.webp";
+import vehicleP from "../assets/technology/image-launch-vehicle-portrait.jpg";
+import capsuleL from "../assets/technology/image-space-capsule-landscape.jpg";
+import capsuleP from "../assets/technology/image-space-capsule-portrait.jpg";
+import spaceportL from "../assets/technology/image-spaceport-landscape.jpg";
+import spaceportP from "../assets/technology/image-spaceport-portrait.jpg";
+import vehicleL from "../assets/technology/technology-vehicle.jpg";
 
 export const crewPic = [
   {
     png: hurleyPNG,
-    webp: hurleyWEBP
+    webp: hurleyWEBP,
   },
   {
     png: markPNG,
-    webp: markWEBP
+    webp: markWEBP,
   },
   {
     png: victorPNG,
-    webp: victorWEBP
+    webp: victorWEBP,
   },
   {
     png: ansairPNG,
-    webp: ansairWEBP
-  }
+    webp: ansairWEBP,
+  },
 ];
 
 export const destPic = {
-  moon : {
+  moon: {
     png: moonPNG,
-    webp: moonWEBP
+    webp: moonWEBP,
   },
-  mars : {
+  mars: {
     png: marsPNG,
-    webp: marsWEBP
+    webp: marsWEBP,
   },
-  titan : {
+  titan: {
     png: titanPNG,
-    webp: titanWEBP
+    webp: titanWEBP,
   },
-  europa : {
+  europa: {
     png: europaPNG,
-    webp: europaWEBP
-  }
-}
+    webp: europaWEBP,
+  },
+};
 
 /* 
 p: portrait
@@ -67,11 +66,11 @@ l: landscape
 export const techPic = [
   {
     p: vehicleP,
-    l: vehicleL
+    l: vehicleL,
   },
   {
     p: spaceportP,
-    l: spaceportL
+    l: spaceportL,
   },
   {
     p: capsuleP,

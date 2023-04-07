@@ -1,14 +1,14 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .destination {
-  background-image: url('../public/destination/background-destination-mobile.jpg');
+  background-image: url("../assets/destination/background-destination-mobile.jpg");
 
   @include mq(medium, min-width) {
-    background-image: url('../public/destination/background-destination-tablet.jpg');
+    background-image: url("../assets/destination/background-destination-tablet.jpg");
   }
 
   @include mq(large, min-width) {
-    background-image: url('../public/destination/background-destination-desktop.jpg');
+    background-image: url("../assets/destination/background-destination-desktop.jpg");
   }
 }
 
@@ -27,8 +27,6 @@
   }
 
   @include mq(large, min-width) {
-    
-
     & > .destination-title {
       top: -8rem;
       left: 0;
@@ -37,7 +35,7 @@
 }
 
 .number-indicator {
-  color: hsl(var(--clr-white) / .5);
+  color: hsl(var(--clr-white) / 0.5);
   font-weight: 700;
   margin-right: 1rem;
 }
@@ -45,7 +43,6 @@
 .destination-image {
   width: clamp(10rem, 30vw, 30rem);
 }
-
 
 .info-section {
   flex-direction: column;
@@ -75,11 +72,11 @@
 .est-wrapper {
   margin-top: 2.5rem;
   padding-top: 2.5rem;
-  border-top: 2px hsl(var(--clr-white) / .2) solid;
+  border-top: 2px hsl(var(--clr-white) / 0.2) solid;
   justify-content: space-between;
-  
+
   @include mq(large, max-width) {
-    &{
+    & {
       justify-content: space-evenly;
     }
   }

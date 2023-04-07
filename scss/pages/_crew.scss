@@ -1,24 +1,24 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .crew {
-  background-image: url('../public/crew/background-crew-mobile.jpg');
+  background-image: url("../assets/crew/background-crew-mobile.jpg");
 
   @include mq(medium, min-width) {
-    background-image: url('../public/crew/background-crew-tablet.jpg');
+    background-image: url("../assets/crew/background-crew-tablet.jpg");
   }
 
   @include mq(large, min-width) {
-    background-image: url('../public/crew/background-crew-desktop.jpg');
+    background-image: url("../assets/crew/background-crew-desktop.jpg");
   }
 }
 
 .grid-container__crew {
   place-items: center;
-  grid-template-areas: 
-    'title'
-    'image'
-    'dots'
-    'info';
+  grid-template-areas:
+    "title"
+    "image"
+    "dots"
+    "info";
 
   & > .crew-title {
     grid-area: title;
@@ -35,32 +35,30 @@
   & > picture {
     grid-area: image;
     max-width: 60%;
-    border-bottom: 2px solid hsl(var(--clr-white) / .5);
+    border-bottom: 2px solid hsl(var(--clr-white) / 0.5);
   }
 
   @include mq(medium, min-width) {
     & {
       grid-template-areas:
-        'title'
-        'info'
-        'dots'
-        'image';
+        "title"
+        "info"
+        "dots"
+        "image";
     }
 
     & > .crew-title {
       justify-self: start;
     }
-
   }
 
   @include mq(large, min-width) {
-
     & {
       justify-items: start;
       grid-template-areas:
-        '. title image .'
-        '. info image .'
-        '. dots image .'
+        ". title image ."
+        ". info image ."
+        ". dots image .";
     }
 
     & > picture {
@@ -71,26 +69,24 @@
 }
 
 .crew-info {
-
   & p {
     margin: 0 auto;
   }
 
   & h2 {
-    color: hsl(var(--clr-white) / .5);
+    color: hsl(var(--clr-white) / 0.5);
   }
 
-  @include mq(large,min-width) {
-    & p{
+  @include mq(large, min-width) {
+    & p {
       margin: 0;
     }
   }
-
 }
 
 .crew-list {
-  @include mq(large,min-width) {
-    &{
+  @include mq(large, min-width) {
+    & {
       align-self: end;
     }
   }
