@@ -14,6 +14,37 @@ const activeSideBar = () => {
   });
 };
 
+/* functions */
+/**
+ * @description default focus affect
+ * @param {*} crew
+ */
+const defaultSelected = (selected) => {
+  $("[aria-selected = true]").attr("aria-selected", false);
+  $(selected).attr("aria-selected", true);
+};
+
+/**
+ * @description replace related destination data
+ * @param {*} destination
+ */
+const swapDestination = (dest, pic) => {
+  destinations.map((elem) => {
+    if (elem.name.toLowerCase() === dest) {
+      $("#description").text(elem.description);
+      $("#title").text(elem.name);
+      $("#distance").text(elem.distance);
+      $("#trave-time").text(elem.travel);
+      $("#destination-picture source").attr("srcset", pic[dest].webp);
+      $("#destination-picture img").attr("src", pic[dest].png);
+    }
+  });
+};
+
+window.activeSideBar = activeSideBar;
+window.defaultSelected = defaultSelected;
+window.swapDestination = swapDestination;
+
 activeSideBar();
 
 $(".technology-list button").each((index, elem) => {
@@ -46,30 +77,3 @@ $(".crew-list button").each((index, elem) => {
       .attr("alt", crew[index].role);
   });
 });
-
-/* functions */
-/**
- * @description default focus affect
- * @param {*} crew
- */
-const defaultSelected = (selected) => {
-  $("[aria-selected = true]").attr("aria-selected", false);
-  $(selected).attr("aria-selected", true);
-};
-
-/**
- * @description replace related destination data
- * @param {*} destination
- */
-const swapDestination = (dest, pic) => {
-  destinations.map((elem) => {
-    if (elem.name.toLowerCase() === dest) {
-      $("#description").text(elem.description);
-      $("#title").text(elem.name);
-      $("#distance").text(elem.distance);
-      $("#trave-time").text(elem.travel);
-      $("#destination-picture source").attr("srcset", pic[dest].webp);
-      $("#destination-picture img").attr("src", pic[dest].png);
-    }
-  });
-};
