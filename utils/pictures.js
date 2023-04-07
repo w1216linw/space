@@ -14,12 +14,12 @@ import moonPNG from "../assets/destination/image-moon.png";
 import moonWEBP from "../assets/destination/image-moon.webp";
 import titanPNG from "../assets/destination/image-titan.png";
 import titanWEBP from "../assets/destination/image-titan.webp";
+import vehicleL from "../assets/technology/image-launch-vehicle-landscape.jpg";
 import vehicleP from "../assets/technology/image-launch-vehicle-portrait.jpg";
 import capsuleL from "../assets/technology/image-space-capsule-landscape.jpg";
 import capsuleP from "../assets/technology/image-space-capsule-portrait.jpg";
 import spaceportL from "../assets/technology/image-spaceport-landscape.jpg";
 import spaceportP from "../assets/technology/image-spaceport-portrait.jpg";
-import vehicleL from "../assets/technology/technology-vehicle.jpg";
 
 export const crewPic = [
   {

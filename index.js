@@ -23,7 +23,7 @@ $(".technology-list button").each((index, elem) => {
     $("#technology-description").text(technology[index].description);
     $("#technology-picture source").attr("srcset", techPic[index].p);
     $("#technology-picture img")
-      .attr("src", pic[index].l)
+      .attr("src", techPic[index].l)
       .attr("alt", technology[index].name);
   });
 });
