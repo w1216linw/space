@@ -255,7 +255,7 @@
 
 /* Home Page */
 .home {
-  background-image: url("../as/home/background-home-mobile.jpg");
+  background-image: url("../assets/home/background-home-mobile.jpg");
 }
 @media screen and (min-width: 35em) {
   .home {
@@ -323,7 +323,7 @@
     display: block;
     width: 1.5rem;
     aspect-ratio: 1;
-    background: url("../public/shared/icon-hamburger.svg") no-repeat center;
+    background: url("../assets/shared/icon-hamburger.svg") no-repeat center;
     border: 0;
     position: absolute;
     top: 2rem;
@@ -337,7 +337,7 @@
     outline-offset: 5px;
   }
   .menu-toggle[aria-expanded=true] {
-    background-image: url("../public/shared/icon-close.svg");
+    background-image: url("../assets/shared/icon-close.svg");
   }
 }
 

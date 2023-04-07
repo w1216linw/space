@@ -3,7 +3,7 @@
 
 /* Home Page */
 .home {
-  background-image: url("../as/home/background-home-mobile.jpg");
+  background-image: url("../assets/home/background-home-mobile.jpg");
 
   @include mq(medium, min-width) {
     background-image: url("../assets/home/background-home-tablet.jpg");
@@ -73,7 +73,7 @@
     display: block;
     width: 1.5rem;
     aspect-ratio: 1;
-    background: url("../public/shared/icon-hamburger.svg") no-repeat center;
+    background: url("../assets/shared/icon-hamburger.svg") no-repeat center;
     border: 0;
     position: absolute;
     top: 2rem;
@@ -88,7 +88,7 @@
     }
 
     &[aria-expanded="true"] {
-      background-image: url("../public/shared/icon-close.svg");
+      background-image: url("../assets/shared/icon-close.svg");
     }
   }
 }
